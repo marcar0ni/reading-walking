@@ -47,7 +47,7 @@ function configureResponse(response, query, position) {
         }
         // fill in holes if necessary
         for (i = position - index; i > 0; i--) {
-            resultTextArr.push(' ')
+            resultTextArr.push('•')
         }
         // start filling with words
         for (i = 0; i < 17-position; i++) {
@@ -59,7 +59,7 @@ function configureResponse(response, query, position) {
     } else if (index + 15 > responseTextArr.length - 1) {
         resultTextArr = responseTextArr.slice(index - position, responseTextArr.length)
         for (i = index + 16 - responseTextArr.length; i > 0; i--) {
-            resultTextArr.push(' ')
+            resultTextArr.push('•')
         }
     } else {
         resultTextArr = responseTextArr.slice(index - position, index - position + 16)
